@@ -1,0 +1,108 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*每个页面公共css */
+@font-face {
+  font-family: 'eosfont';  /* project id 1329656 */
+  src: url('https://at.alicdn.com/t/font_1329656_212y4jil9w9.eot');
+  src: url('https://at.alicdn.com/t/font_1329656_212y4jil9w9.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1329656_212y4jil9w9.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1329656_212y4jil9w9.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1329656_212y4jil9w9.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1329656_212y4jil9w9.svg#eosfont') format('svg');
+}
+.eosfont {
+  font-family: "eosfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-iconfontjiantouzuo:before {
+  content: "\E689";
+}
+.icon-xuanzhong:before {
+  content: "\E659";
+}
+.icon-jiantou-copy:before {
+  content: "\E616";
+}
+.icon-jiantou-copy-copy:before {
+  content: "\E617";
+}
+.icon-angle-down:before {
+  content: "\E609";
+}
+.icon-pingjia:before {
+  content: "\E676";
+}
+.icon-dizhi:before {
+  content: "\E62B";
+}
+.icon-pingfen:before {
+  content: "\E60A";
+}
+.icon-dingdan:before {
+  content: "\E625";
+}
+.icon-malingshuxiangmuicon-:before {
+  content: "\E60F";
+}
+.icon-ico_home_appraise:before {
+  content: "\E65B";
+}
+.icon-dingwei:before {
+  content: "\E614";
+}
+.icon-dizhi1:before {
+  content: "\E639";
+}
+.icon-lajidaifafang:before {
+  content: "\E9AD";
+}
+.icon-star:before {
+  content: "\E605";
+}
+.icon-sousuo:before {
+  content: "\E600";
+}
+.icon-wode:before {
+  content: "\E601";
+}
+.icon-naozhong:before {
+  content: "\E602";
+}
+.icon-xuanzhongyuandian:before {
+  content: "\E603";
+}
+.icon-xuanzhong1:before {
+  content: "\E66A";
+}
+.icon-ziyuan:before {
+  content: "\E6BB";
+}
+.icon-icon-test-copy:before {
+  content: "\E60C";
+}
+.icon-shezhi:before {
+  content: "\E604";
+}
+uni-page-body, page {
+	background-color: #E6E6E6;
+	font-size: 30rpx;
+	width: 100%;
+}
+
+

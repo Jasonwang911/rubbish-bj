@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'eosfont';  /* project id 1329656 */
+  src: url('https://at.alicdn.com/t/font_1329656_212y4jil9w9.eot');
+  src: url('https://at.alicdn.com/t/font_1329656_212y4jil9w9.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1329656_212y4jil9w9.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1329656_212y4jil9w9.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1329656_212y4jil9w9.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1329656_212y4jil9w9.svg#eosfont') format('svg');
+}
+
+.eosfont {
+  font-family: "eosfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfontjiantouzuo:before {
+  content: "\e689";
+}
+
+.icon-xuanzhong:before {
+  content: "\e659";
+}
+
+.icon-jiantou-copy:before {
+  content: "\e616";
+}
+
+.icon-jiantou-copy-copy:before {
+  content: "\e617";
+}
+
+.icon-angle-down:before {
+  content: "\e609";
+}
+
+.icon-pingjia:before {
+  content: "\e676";
+}
+
+.icon-dizhi:before {
+  content: "\e62b";
+}
+
+.icon-pingfen:before {
+  content: "\e60a";
+}
+
+.icon-dingdan:before {
+  content: "\e625";
+}
+
+.icon-malingshuxiangmuicon-:before {
+  content: "\e60f";
+}
+
+.icon-ico_home_appraise:before {
+  content: "\e65b";
+}
+
+.icon-dingwei:before {
+  content: "\e614";
+}
+
+.icon-dizhi1:before {
+  content: "\e639";
+}
+
+.icon-lajidaifafang:before {
+  content: "\e9ad";
+}
+
+.icon-star:before {
+  content: "\e605";
+}
+
+.icon-sousuo:before {
+  content: "\e600";
+}
+
+.icon-wode:before {
+  content: "\e601";
+}
+
+.icon-naozhong:before {
+  content: "\e602";
+}
+
+.icon-xuanzhongyuandian:before {
+  content: "\e603";
+}
+
+.icon-xuanzhong1:before {
+  content: "\e66a";
+}
+
+.icon-ziyuan:before {
+  content: "\e6bb";
+}
+
+.icon-icon-test-copy:before {
+  content: "\e60c";
+}
+
+.icon-shezhi:before {
+  content: "\e604";
+}

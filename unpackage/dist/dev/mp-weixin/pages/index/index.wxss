@@ -1,0 +1,40 @@
+
+.top-location{
+	text-align: center;
+	margin-bottom: 10rpx;
+	background: #fff;
+	line-height: 80rpx;
+	vertical-align: top;
+}
+.top-location .icon{
+	color: #459DF5;
+}
+.top-location .location {
+	display: inline-block;
+	margin: 0 20rpx;
+	font-size: 36rpx;
+}
+.list-block{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	background: #fff;
+	line-height: 80rpx;
+	border-bottom: 1rpx solid #C0C0C0;
+}
+.list-block .name{
+	width: 120rpx;
+	padding-left: 10rpx;
+	color: #808080;
+}
+.list-block .value{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	text-align: right;
+	line-height: 80rpx;
+	height: 80rpx;
+}
+
