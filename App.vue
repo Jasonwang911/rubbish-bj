@@ -14,6 +14,7 @@
 
 <style>
 	/*每个页面公共css */
+@import './common/css/uni.css';
 @import './common/css/eosfont.css';
 
 uni-page-body, page {

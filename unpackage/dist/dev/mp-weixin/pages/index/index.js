@@ -134,6 +134,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
 var _amapWx = _interopRequireDefault(__webpack_require__(/*! ../../common/utils/amap-wx.js */ 17));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
 //
 //
@@ -155,13 +162,18 @@ var _amapWx = _interopRequireDefault(__webpack_require__(/*! ../../common/utils/
 //
 //
 //
-var wPicker = function wPicker() {return Promise.all(/*! import() | components/w-picker/w-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/w-picker/w-picker")]).then(__webpack_require__.bind(null, /*! @/components/w-picker/w-picker.vue */ 28));};var _default = { data: function data() {return { title: 'Hello', address: '', amapPlugin: null, key: 'afc6e09bc51c1c6deb31a734c69e5125', addressName: '定位中...', weather: { hasData: false, data: [] } };}, components: { wPicker: wPicker }, onLoad: function onLoad() {var _this = this;this.amapPlugin = new _amapWx.default.AMapWX({
-      key: this.key });
-
-    // this.getRegeo
-    this.amapPlugin.getRegeo({
-      success: function success(data) {
-        console.log(data);
+//
+//
+//
+//
+//
+//
+//
+var _default = { data: function data() {return { title: 'Hello', address: '', amapPlugin: null, key: 'afc6e09bc51c1c6deb31a734c69e5125', addressName: '定位中...', weather: { hasData: false, data: [] }, // 上门日期选择
+      days: ['今天', '明天', '后天'], times: ['10点-11点', '12点-13点', '14点-15点'], timeSelect: [0, 0], /**
+                                                                                               * 解决动态设置indicator-style不生效的问题
+                                                                                               */visible: false, indicatorStyle: "height: ".concat(Math.round(uni.getSystemInfoSync().screenWidth / (750 / 100)), "px;") };}, onLoad: function onLoad() {var _this = this;this.amapPlugin = new _amapWx.default.AMapWX({ key: this.key }); // this.getRegeo
+    this.amapPlugin.getRegeo({ success: function success(data) {console.log(data);
         _this.addressName = data[0].regeocodeData.aois && data[0].regeocodeData.aois.length > 0 ? data[0].regeocodeData.aois[0].name : '暂时无法获取您的位置';
         uni.hideLoading();
       },
@@ -171,9 +183,16 @@ var wPicker = function wPicker() {return Promise.all(/*! import() | components/w
 
   },
   methods: {
-    // 掉起时间picker
     handleTimePicker: function handleTimePicker() {
-      this.$refs.picker.show();
+      this.visible = true;
+    },
+    // 时间选择
+    bindChange: function bindChange(e) {
+      console.log(e, e.detail.value);
+      var val = e.detail.value;
+      // this.year = this.years[val[0]]
+      // this.month = this.months[val[1]]
+      // this.day = this.days[val[2]]
     },
     // 高德地图
     getRegeo: function getRegeo() {var _this2 = this;

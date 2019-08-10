@@ -12,16 +12,22 @@
 		</view>
 		<view class="list-block">
 			<text class="name">上门时间</text>
-			<text class="value" @click="handleTimePicker">{{}}</text>
+			<text class="value" @tap="handleTimePicker">{{sda }}</text>
 			<text class="eosfont icon">&#xe616;</text>
 		</view>
-		<w-picker :mode="mode" startYear="2016" endYear="2030" step="1" :current="true" ref="picker" themeColor="#f00" :selectList="selectList"></w-picker>
+		<picker-view v-if="visible" :indicator-style="indicatorStyle" :value="timeSelect" @change="bindChange">
+		    <picker-view-column>
+		        <view class="item" v-for="(item,index) in days" :key="index">{{item}}</view>
+		    </picker-view-column>
+		    <picker-view-column>
+		        <view class="item" v-for="(item,index) in times" :key="index">{{item}}</view>
+		    </picker-view-column>
+		</picker-view>
 	</view>
 </template>
 
 <script>
 	import amap from '../../common/utils/amap-wx.js';  
-	import wPicker from "@/components/w-picker/w-picker.vue";
 	
 	export default {
 		data() {
@@ -34,11 +40,17 @@
 				weather: {  
 					hasData: false,  
 					data: []  
-				}  
+				},
+				// 上门日期选择
+				days: ['今天', '明天', '后天'],
+				times: ['10点-11点', '12点-13点', '14点-15点'],
+				timeSelect: [0,0],
+				/**
+				 * 解决动态设置indicator-style不生效的问题
+				 */
+				visible: false,
+				indicatorStyle: `height: ${Math.round(uni.getSystemInfoSync().screenWidth/(750/100))}px;`
 			}
-		},
-		components: {
-			wPicker
 		},
 		onLoad() {
 			this.amapPlugin = new amap.AMapWX({  
@@ -57,9 +69,16 @@
 			});  
 		},
 		methods: {
-			// 掉起时间picker
 			handleTimePicker() {
-				this.$refs.picker.show();
+				this.visible = true
+			},
+			// 时间选择
+			bindChange (e) {
+				console.log(e, e.detail.value)
+			    const val = e.detail.value
+			    // this.year = this.years[val[0]]
+			    // this.month = this.months[val[1]]
+			    // this.day = this.days[val[2]]
 			},
 			// 高德地图
 			getRegeo() {  
@@ -110,5 +129,16 @@
 	text-align: right;
 	line-height: 80upx;
 	height: 80upx;
+}
+	
+picker-view {
+		width: 100%;
+		height: 800upx;
+		margin-top:20upx;
+}
+
+.item {
+		line-height: 100upx;
+		text-align: center;
 }
 </style>
