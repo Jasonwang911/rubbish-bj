@@ -15,7 +15,7 @@
 			<text class="value" @tap="handleTimePicker">{{sda }}</text>
 			<text class="eosfont icon">&#xe616;</text>
 		</view>
-		<picker-view v-if="visible" :indicator-style="indicatorStyle" :value="timeSelect" @change="bindChange">
+		<picker-view class="data-picker" v-if="visible" :indicator-style="indicatorStyle" :value="timeSelect" @change="bindChange">
 		    <picker-view-column>
 		        <view class="item" v-for="(item,index) in days" :key="index">{{item}}</view>
 		    </picker-view-column>
@@ -98,6 +98,9 @@
 </script>
 
 <style>
+.content{
+	position: relative;
+}
 .top-location{
 	text-align: center;
 	margin-bottom: 10upx;
@@ -133,8 +136,11 @@
 	
 picker-view {
 		width: 100%;
-		height: 800upx;
+		height: 500upx;
 		margin-top:20upx;
+		position: absolute;
+		left: 0;
+		bottom: 0;
 }
 
 .item {
